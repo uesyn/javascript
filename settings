@@ -15,19 +15,20 @@
 # limitations under the License.
 
 # kubernetes-client/gen commit to use for code generation.
-export GEN_COMMIT=82c3ff5
+# export GEN_COMMIT=82c3ff5
+export GEN_ROOT=/home/uesyn/src/github.com/uesyn/javascript/gen
 
 # GitHub username/organization to clone kubernetes repo from.
-export USERNAME=kubernetes
+export USERNAME=uesyn
 
 # Kubernetes branch/tag to get the OpenAPI spec from.
-export KUBERNETES_BRANCH="v1.22.2"
+export KUBERNETES_BRANCH="v1.23.2"
 
 # client version for packaging and releasing. It can
 # be different than SPEC_VERSION.
 export CLIENT_VERSION="0.8-SNAPSHOT"
 
 # Name of the release package
-export PACKAGE_NAME="@kubernetes/node-client"
+export PACKAGE_NAME="@kubernetes/deno-client"
 
-export OPENAPI_GENERATOR_COMMIT=1314e229
+export OPENAPI_GENERATOR_COMMIT=v6.0.0
