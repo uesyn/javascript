@@ -11,6 +11,7 @@
  */
 
 import { V1EventSource } from './V1EventSource';
+import { V1MicroTime } from '../../types';
 import { V1ObjectMeta } from './V1ObjectMeta';
 import { V1ObjectReference } from './V1ObjectReference';
 import { V1beta1EventSeries } from './V1beta1EventSeries';
@@ -42,9 +43,9 @@ export class V1beta1Event {
     'deprecatedLastTimestamp'?: Date;
     'deprecatedSource'?: V1EventSource;
     /**
-    * eventTime is the time when this Event was first observed. It is required.
+    * MicroTime is version of Time with microsecond level precision.
     */
-    'eventTime': Date;
+    'eventTime': V1MicroTime;
     /**
     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
@@ -116,8 +117,8 @@ export class V1beta1Event {
         {
             "name": "eventTime",
             "baseName": "eventTime",
-            "type": "Date",
-            "format": "date-time"
+            "type": "V1MicroTime",
+            "format": "date-time-micro"
         },
         {
             "name": "kind",
